@@ -1,0 +1,347 @@
+#i_buttonSlideUp{
+    position: fixed;
+    left: 92%;
+    top: 88%;
+    z-index: 100;
+    display: none;
+}
+#i_buttonSlideUp:hover{
+    cursor: pointer;
+}
+
+#i_content{
+    height: 100%;
+}
+#i_main{
+    width: 100%;
+    height: 95%;
+    min-height: 630px;
+    background: url(../img/bg.jpg) no-repeat center center fixed;
+    /*-webkit-background-size: cover;*/
+    /*-moz-background-size: cover;*/
+    /*-o-background-size: cover;*/
+    /*background-size: cover;*/
+}
+
+/*Прямоугльники*/
+#i_topRects{
+    width: 1000px;
+    height: 95%;
+    margin: 0 auto;
+}
+.c_topRect,.c_topRectNonHover{
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border: #000 solid 2px;
+}
+.c_topRect:hover{
+    background-color: rgba(255, 254, 215, 0.20);
+    cursor: pointer;
+}
+#i_topRect_1{
+    top: 100px;
+    margin-left: 100px;
+
+    border-right: none;
+}
+#i_topRect_2{
+    margin-left: 154px;
+    top: 185px;
+
+    height: 300px;
+    border: none;
+
+    border-left: #000 solid 2px;
+}
+#i_topRect_3{
+    margin-left: 313px;
+    top: 99px;
+}
+#i_topRect_4{
+    margin-left: 313px;
+    top: 314px;
+    overflow: hidden;
+    /*background: url("../img/notebook.jpg");*/
+}
+#i_topRect_5{
+    margin-left: 202px;
+    top: 425px;
+}
+#i_topRect_6{
+    margin-left: 424px;
+    top: 425px;
+}
+#i_topRect_7{
+    margin-left: 639px;
+    top: 425px;
+    overflow: hidden;
+}
+#i_topRect_8{
+    margin-left: 750px;
+    top: 314px;
+    overflow: hidden;
+}
+#i_topRect_9{
+    margin-left: 639px;
+    top: 203px;
+}
+#i_topRect_10{
+    height: 75px;
+
+    margin-left: 395px;
+    top: 274px;
+
+    border: none;
+    border-right: #000000 solid 2px;
+}
+#i_topRect_11{
+    height: 137px;
+
+    margin-left: 539px;
+    top: 314px;
+
+    border: none;
+    border-right: #000000 solid 2px;
+}
+#i_topRect_12{
+    height: 142px;
+    margin-left: 538px;
+    top: 98px;
+
+    border: none;
+    border-top: #000000 solid 2px;
+}
+#i_topRect_13{
+    margin-left: 841px;
+    top: 252px;
+    height: 101px;
+
+    border: none;
+    border-right: #000000 solid 2px;
+}
+#i_topRect_14{
+    margin-left: 755px;
+    top: 81px;
+    height: 171px;
+
+    border: none;
+    border-right: #000000 solid 2px;
+}
+#i_topRect_m_1{
+    margin-left: 794px;
+    top: 173px;
+    height: 50px;
+    width: 50px;
+}
+#i_topRect_m_2{
+    margin-left: 834px;
+    top: 133px;
+    height: 50px;
+    width: 50px;
+}
+#i_topRect_m_3{
+    margin-left: 723px;
+    top: 120px;
+    height: 50px;
+    width: 50px;
+}
+#i_topRect_m_4{
+    margin-left: 686px;
+    top: 60px;
+    height: 50px;
+    width: 50px;
+}
+#i_topRect_m_5{
+    margin-left: 760px;
+    top: 60px;
+    height: 50px;
+    width: 50px;
+}
+#i_topRect_m_6{
+    margin-left: 834px;
+    top: 60px;
+    height: 50px;
+    width: 50px;
+}
+
+#i_mainLogoRect{
+    width: 300px;
+    float: left;
+    -webkit-transform: rotate(-90deg);
+    margin-left: -75px;
+    margin-top:  100px;
+}
+.c_textRotateRect{
+    -webkit-transform: rotate(-90deg);
+    font-size: 55px;
+    float: left;
+}
+#i_buttonMenuRect{
+    height: 60px;
+    width: 60px;
+    margin-left: 100px;
+    margin-top: -30px;
+    -webkit-transform: rotate(45deg);
+    /*border: #000000 solid medium;*/
+}
+#i_buttonMenuRect:hover{
+    background-color: #dddd00;
+    cursor: pointer;
+}
+#i_buttonMenuImg{
+    -webkit-transform:rotate(-45deg);
+    margin-top: 18px;
+    width:47px;
+    margin-left: 7px;
+}
+/*Конец прямоугульникам*/
+
+/*Главное меню*/
+#i_mainMenu{
+    height: 5px;
+    margin-top: -5px;
+    /*width: 280px;*/
+    width: 10px;
+    margin-left: 125px;
+}
+/*Конец Главное меню*/
+
+/*Лучшие услуги*/
+#i_services{
+    background-color: #ffffff;
+    width: 100%;
+    min-height: 450px;
+}
+#i_servicesContent{
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+#i_servicesRectBlock{
+    width: 1060px;
+    margin: 110px auto;
+}
+.c_servicesRect{
+    height: 130px;
+    width: 130px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border: #DB2CC5 solid 3px;
+    margin-right: 110px;
+}
+.c_servicesRect:hover{
+    background-color: #DB2CC5;
+    color: #ffffff;
+    cursor: pointer;
+}
+/*конец лучшие услуги*/
+
+/*Все услуги*/
+#i_allServices{
+    background-color: #DEDEE0;
+    width: 100%;
+    min-height: 700px;
+    padding-top: 1px;
+}
+#i_allServicesContent{
+    width: 1300px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+#i_allServicesRectBlock{
+    width: 970px;
+    margin: 70px auto;
+}
+.c_allServicesRect{
+    height: 70px;
+    width: 70px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border: #FFF solid 3px;
+    margin-right: 100px;
+    float: left;
+}
+.c_allServicesRect:hover{
+    border: #DB2CC5 solid 3px;
+    cursor: pointer;
+}
+.allServicesText{
+    margin-left: -75px;
+    margin-top: -15px;
+    float:left;
+    width: 170px;
+}
+.allServicesTextHeader{
+    font-size: 19px;
+    font-weight: bold;
+    width: 170px;
+}
+/*конец Все услуги*/
+
+/*Печенкьки*/
+#i_cookies{
+    width: 100%;
+    background: url(../img/coockiesBigBack.jpg) no-repeat  #000000;
+    background-size: cover;
+    margin-top: -70px;
+    min-height: 800px;
+    padding-top: 1px;
+}
+#i_cookiesContent{
+    width: 1300px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+/*конец Печенкьки*/
+
+/*Спец предложения*/
+#i_specOffers{
+    background-color: #DEDEE0;
+    width: 100%;
+    min-height: 600px;
+    padding-top: 1px;
+}
+#i_specOffersContent{
+    width: 1300px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+/*конец Спец предложения*/
+
+/*Свяжитесь с нами*/
+#i_contactUs{
+    background-color: #ffffff;
+    width: 100%;
+    min-height: 670px;
+}
+#i_contactUsContent{
+    width: 1300px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+#i_contactUsContentBlock{
+    width: 850px;
+    margin: 70px auto;
+    text-align: left;
+}
+#i_buttonContactUs{
+    min-width: 130px;
+    margin-left: -10px;
+}
+/*конец Свяжитесь с нами*/
+
+/*Подвал*/
+#i_bottom{
+    background-color: #ffffff;
+    width: 100%;
+    min-height: 100px;
+}
+#i_bottomContent{
+    width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+/*конец Подвал*/
