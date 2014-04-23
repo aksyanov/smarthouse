@@ -6,6 +6,20 @@
     <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/style/bootstrap.css">
 </head>
 <body>
+
+    <?
+        if(!Yii::app()->user->isGuest){
+    ?>
+        <div id="userInfoWidget">
+            <?php
+                $this->widget('WLight',array('params'=>array('param1'=>'param1text')));?>
+            ?>
+            <div class="clear"></div>
+        </div>
+    <?
+        }
+    ?>
+
     <nav class="navbar navbar-default">
         <a class="navbar-brand" href="#">SmartHouse</a>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -23,6 +37,11 @@
             </ul>
         </div>
     </nav>
+
+    <?php echo $content;
+
+    $this->widget('WLight',array('params'=>array('param1'=>'param1text')));?>
+
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jQuery.js"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.min.js"></script>
     <script src="<?php echo Yii::app()->request->baseUrl;?>/js/jqueryScrollTo.js"></script>
