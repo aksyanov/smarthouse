@@ -16,7 +16,6 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
-        'application.components.ajax.*',
 		'application.widgets.*',
 	),
 
@@ -40,11 +39,14 @@ return array(
 		),
 		'urlManager'=>array(
 			'urlFormat'=>'path',
+            'showScriptName' => false,
+            'caseSensitive' => false,
 			'rules'=>array(
-				'post/<id:\d+>/<title:.*?>'=>'post/view',
-				'posts/<tag:.*?>'=>'post/index',
+				/*'post/<id:\d+>/<title:.*?>'=>'post/view',
+				'posts/<tag:.*?>'=>'post/index',*/
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
-			),
+                /*'<module:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<controller>/<action>',*/
+            ),
 		),
 		'log'=>array(
 			'class'=>'CLogRouter',

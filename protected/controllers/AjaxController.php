@@ -14,21 +14,15 @@ class AjaxController extends CController
 
 	public function actionIndex()
 	{
-        echo json_encode(Ajax::getCalcTempalates());
 	}
 
-    public function actionGetCalcTemplates()
+    public function actionDeleteDevice()
     {
-        echo json_encode(Ajax::getCalcTempalates());
+        echo json_encode(Ajax::deleteDevice());
     }
 
-    public function actionGetCalcElements()
+    public function actionGetDevicesCatalog()
     {
-        echo json_encode(Ajax::GetCalcElements());
-    }
-    public function actionSaveCalc()
-    {
-        var_dump($_GET);
-        //echo json_encode(Ajax::GetCalcElements());
+        echo json_encode(Ajax::GetDevicesCatalog());
     }
 }

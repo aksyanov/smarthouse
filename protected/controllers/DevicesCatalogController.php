@@ -1,6 +1,6 @@
 <?php
 
-class CalcController extends CController
+class DevicesCatalogController extends CController
 {
 	public $layout='main';
 
@@ -30,8 +30,7 @@ class CalcController extends CController
 
 	public function actionIndex()
 	{
-        $groups = CalcGroups::model()->findAll();
-		$this->render('index',array('groups'=>$groups));
+        $devices = DevicesCatalog::model()->findAll();
+        $this->render('index',array('devices'=>$devices));
 	}
-
 }

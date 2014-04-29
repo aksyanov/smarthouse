@@ -26,10 +26,10 @@ class DevicesCatalog extends CActiveRecord
 	public function rules()
 	{
 		return array(
-			array('id,name,address,type', 'required'),
+			array('id,name,address,type_id', 'required'),
 			array('name', 'length', 'max'=>150),
             array('address', 'length', 'max'=>100),
-            array('id,type', 'numerical', 'integerOnly'=>true),
+            array('id,type_id', 'numerical', 'integerOnly'=>true),
 		);
 	}
 
