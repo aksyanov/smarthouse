@@ -30,7 +30,6 @@ class DevicesCatalogController extends CController
 
 	public function actionIndex()
 	{
-        $devices = DevicesCatalog::model()->findAll();
-        $this->render('index',array('devices'=>$devices));
+        $this->render('index');
 	}
 }

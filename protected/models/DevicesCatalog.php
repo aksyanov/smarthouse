@@ -39,10 +39,7 @@ class DevicesCatalog extends CActiveRecord
 	public function relations()
 	{
         return array(
-//            'calcElements'=>array(self::HAS_MANY, 'CalcElements', 'calc_groups_id'),
-//            'calcTemplates'=>array(self::HAS_MANY, 'CalcTemplates', 'calc_groups_id'),
-
-            'DevicesType'=>array(self::BELONGS_TO, 'DevicesType', 'type_id'),
+            'DevicesType'=>array(self::BELONGS_TO, 'DevicesType', array('type_id'=>'id')),
         );
 	}
 

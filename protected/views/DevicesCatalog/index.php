@@ -1,34 +1,11 @@
 <div class="btn-group">
     <button type="button" class="btn btn-default">Добавить</button>
-
+    <button id="btn_renew_device" type="button" class="btn btn-default btn_renew_device">Обновить<img id="prelod_renew" style="display: none;width: 17px;margin-left: 10px;" src="<?php echo Yii::app()->request->baseUrl;?>/img/preloader.gif"></a></button>
 </div>
-<table class="table table-hover table-striped">
-    <thead>
-    <tr>
-        <th>#</th>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Address</th>
-        <th style="width: 20px">Action</th>
-    </tr>
-    </thead>
-    <tbody>
-    <?php
-        $count = 0;
-        foreach($devices as $device){
-            $count++;
-            echo '<tr>';
-            echo '<td>'.$count.'</td>';
+<div id="tableDevicesCatalog">
+<?php
+    echo General::GetDevicesCatalogInHtmlTable();
+?>
+</div>
 
-            echo '<td>'.$device->name.'</td>';
-            echo '<td>'.$device->DevicesType->name.'</td>';
-            echo '<td>'.$device->address.'</td>';
-
-            echo '<td> <button type="button" class="btn btn-default btn_delete_device" value="'.$device->id.'">Удалить</button></td>';
-
-            echo '</tr>';
-        }
-    ?>
-    </tbody>
-</table>
 

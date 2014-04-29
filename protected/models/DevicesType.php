@@ -15,7 +15,7 @@ class DevicesType extends CActiveRecord
 
 	public function tableName()
 	{
-		return 'tbl_devices_catalog';
+		return 'tbl_devices_type';
 	}
 
 	/**

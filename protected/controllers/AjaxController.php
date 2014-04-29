@@ -21,8 +21,8 @@ class AjaxController extends CController
         echo json_encode(Ajax::deleteDevice());
     }
 
-    public function actionGetDevicesCatalog()
+    public function actionGetDevicesCatalogInHtmlTable()
     {
-        echo json_encode(Ajax::GetDevicesCatalog());
+        echo Ajax::GetDevicesCatalogInHtmlTable();
     }
 }

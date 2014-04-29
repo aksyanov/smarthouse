@@ -5,39 +5,9 @@
         </h2><hr>
 
         <?php
-            $this->widget('WTemps',array('params'=>array('param1'=>'param1sdaasda')));
+            $this->widget('WTemps',array('params'=>array('all'=>true)));
         ?>
 
-        <h3>
-            Температура
-        </h3>
-        <ul>
-            <li>
-                Гостинная: <b>25&deg</b>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-danger" style="width: 20%"></div>
-                    <div class="progress-bar progress-bar-warning" style="width: 25%"></div>
-                    <div class="progress-bar progress-bar-success" style="width: 7%"></div>
-                </div>
-            </li>
-            <li>
-                Кухня: <b>59&deg</b>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-danger" style="width: 20%"></div>
-                    <div class="progress-bar progress-bar-warning" style="width: 25%"></div>
-                    <div class="progress-bar progress-bar-success" style="width: 10%"></div>
-                    <div class="progress-bar progress-bar-warning" style="width: 25%"></div>
-                    <div class="progress-bar progress-bar-danger" style="width: 15%"></div>
-                </div>
-            </li>
-            <li>
-                Ванная комната: <b>20&deg</b>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-danger" style="width: 20%"></div>
-                    <div class="progress-bar progress-bar-warning" style="width: 18%"></div>
-                </div>
-            </li>
-        </ul>
         <br>
         <h3>
             Протечка
@@ -55,20 +25,9 @@
         <h2>
             Управление
         </h2><hr>
-        <h3>
-            Освещение
-        </h3>
-        <ul>
-            <li>
-                <b>Гостинная</b><br>
-                <input type="checkbox" name="my-checkbox">
-            </li>
-            <br>
-            <li>
-                <b>Кухня</b><br>
-                <input type="checkbox" name="my-checkbox" checked>
-            </li>
-        </ul>
+        <?php
+            $this->widget('WLight',array('params'=>array('all'=>true)));
+        ?>
     </div>
 </div>
 
