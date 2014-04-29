@@ -33,7 +33,11 @@
                         <li><a href="#">Видео</a></li>
                     </ul>
                 </li>
-                <li><a href="settings">Настройки</a></li>
+                <li class="dropdown"> <a href="settings" class="dropdown-toggle" data-toggle="dropdown">Настройки<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Справочник устройств</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </nav>

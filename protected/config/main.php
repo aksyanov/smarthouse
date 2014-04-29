@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'Management system',
+	'name'=>'Smarthouse',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -29,7 +29,7 @@ return array(
 			'allowAutoLogin'=>true,
 		),
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=deco',
+			'connectionString' => 'mysql:host=localhost;dbname=smarthouse',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',

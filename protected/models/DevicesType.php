@@ -1,14 +1,11 @@
 <?php
 
-class CalcGroups extends CActiveRecord
+class DevicesType extends CActiveRecord
 {
 	/**
-	 * The followings are the available columns in table 'tbl_user':
+	 * The followings are the available columns in table 'tbl_devices_catalog':
 	 * @var integer $id
-	 * @var string $login
-	 * @var string $password
-	 * @var string $companies
-	 * @var string $salt
+	 * @var varchar(150) $name
 	 */
 
 	public static function model($className=__CLASS__)
@@ -18,7 +15,7 @@ class CalcGroups extends CActiveRecord
 
 	public function tableName()
 	{
-		return 'tbl_calc_groups';
+		return 'tbl_devices_catalog';
 	}
 
 	/**
@@ -27,8 +24,8 @@ class CalcGroups extends CActiveRecord
 	public function rules()
 	{
 		return array(
-			array('id,name,sinonym', 'required'),
-			array('sinonym,name', 'length', 'max'=>255),
+			array('id,name', 'required'),
+			array('name', 'length', 'max'=>150),
             array('id', 'numerical', 'integerOnly'=>true),
 		);
 	}
@@ -38,9 +35,8 @@ class CalcGroups extends CActiveRecord
 	 */
 	public function relations()
 	{
-        return array(
-            'calcElements'=>array(self::HAS_MANY, 'CalcElements', 'calc_groups_id'),
-            'calcTemplates'=>array(self::HAS_MANY, 'CalcTemplates', 'calc_groups_id'),
+		return array(
+            'DevicesCatalog'=>array(self::HAS_MANY, 'DevicesCatalog', 'type_id'),
         );
 	}
 
@@ -51,8 +47,6 @@ class CalcGroups extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
-            'sinonym' => 'Sinonym',
 		);
 	}
 }
