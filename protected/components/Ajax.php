@@ -37,6 +37,9 @@ Class Ajax{
         return array('status'=>'ok');
     }
 
+    static public function SpeechAction(){
+        return Speech::init();
+    }
 }
 
 

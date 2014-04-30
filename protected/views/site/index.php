@@ -29,6 +29,14 @@
             $this->widget('WLight',array('params'=>array('all'=>true)));
         ?>
     </div>
+    <div class="col-md-3" style="margin-left: 50px">
+        <h2>
+            Голосовое управление
+        </h2><hr>
+        <?php
+            $this->widget('WSpeechControl');
+        ?>
+    </div>
 </div>
 
 <script>

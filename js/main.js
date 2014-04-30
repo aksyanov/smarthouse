@@ -44,3 +44,35 @@ function changeValueOfSwitch(id,value){
     }})
 }
 
+function speechAction(){
+    speech = $("#speechInput");
+    $.ajax({url: "ajax/SpeechAction",dataType:"json",data:{"speechText":speech.val()},success: function(answer){
+        if(answer['status'] == 'error')
+            alert('Some error');
+        else{
+
+            var htmlText = answer['htmlText'];
+            var htmlTextCommand = answer['htmlTextCommand'];
+            var htmlTextAnswer = answer['htmlTextAnswer'];
+            if(htmlTextAnswer == undefined)
+                htmlTextAnswer = 'Нет результата';
+            if(htmlText == undefined)
+                htmlText = 'Нет результата';
+            if(htmlTextCommand == undefined)
+                htmlTextCommand = 'Нет результата';
+
+            var html = '<div class="alert alert-warning alert-dismissable">'+
+                            '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'+
+                            htmlText+'<br>'+htmlTextCommand+
+                        '</div>';
+
+            var html2 = '<div class="alert alert-success alert-dismissable">'+
+                            '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'+
+                            '<strong>Ответ:</strong> '+htmlTextAnswer+
+                        '</div>';
+
+            $("#speechAnswer").html(html+html2);
+        }
+    }})
+}
+

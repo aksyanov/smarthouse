@@ -30,4 +30,9 @@ class AjaxController extends CController
     {
         echo json_encode(Ajax::ChangeValueOfSwitch());
     }
+
+    public function actionSpeechAction()
+    {
+        echo json_encode(Ajax::SpeechAction());
+    }
 }
