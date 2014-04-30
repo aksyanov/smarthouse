@@ -8,6 +8,8 @@ class DevicesCatalog extends CActiveRecord
 	 * @var varchar(150) $name
 	 * @var varchar(100) $address
 	 * @var int $type_id
+     * @var int $cur_value
+     * @var int $desc
 	 */
 
 	public static function model($className=__CLASS__)
@@ -26,10 +28,10 @@ class DevicesCatalog extends CActiveRecord
 	public function rules()
 	{
 		return array(
-			array('id,name,address,type_id', 'required'),
+			array('id,name,address,type_id,desc', 'required'),
 			array('name', 'length', 'max'=>150),
             array('address', 'length', 'max'=>100),
-            array('cur_value', 'length', 'max'=>150),
+            array('cur_value,desc', 'length', 'max'=>150),
             array('id,type_id', 'numerical', 'integerOnly'=>true),
 		);
 	}

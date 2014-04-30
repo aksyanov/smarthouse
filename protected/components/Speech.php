@@ -134,20 +134,25 @@ class Speech
         }
     }
 
+
+
+
     static public function turnOnLight($_actionWhere){
-        if($_actionWhere=='kitchen')
+        if($_actionWhere=='kitchen'){
+            OWFS::setValueByDesc('Свет в кухне',1);
             return 'Я включил свет на кухне';
-        else if($_actionWhere=='bedroom')
+        }else if($_actionWhere=='bedroom'){
             return 'Я включил свет в спальне';
-        else{
+        }else{
             return 'Где сделать неверно';
         }
     }
 
     static public function turnOffLight($_actionWhere){
-        if($_actionWhere=='kitchen')
+        if($_actionWhere=='kitchen'){
+            OWFS::setValueByDesc('Свет в кухне',0);
             return 'Я выключил свет на кухне';
-        else if($_actionWhere=='bedroom')
+        }else if($_actionWhere=='bedroom')
             return 'Я выключил свет в спальне';
         else{
             return 'Где сделать неверно';

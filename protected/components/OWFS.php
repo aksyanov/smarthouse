@@ -64,7 +64,16 @@ class OWFS
         $device->save();
     }
 
+    public static function setValueByDesc($desc = "", $value){
+        $devices = DevicesCatalog::model()->findAll(array('condition'=>"`desc` LIKE '$desc'"));
+        if($devices == null)
+            return 'Don`t find device';
 
+        foreach($devices as $device){
+            self::setValueByID($device->id,$value);
+        }
+
+    }
 
     //Метод для примера
     public static function key_switch($key_label = "", $key_pio = 0, $key_ch = ""){
