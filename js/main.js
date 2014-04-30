@@ -71,7 +71,7 @@ function speechAction(){
                             '<strong>Ответ:</strong> '+htmlTextAnswer+
                         '</div>';
 
-            $("#speechAnswer").html(html+html2);
+            $("#speechAnswer").prepend(html+html2);
         }
     }})
 }
