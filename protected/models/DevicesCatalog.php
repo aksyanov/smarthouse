@@ -29,6 +29,7 @@ class DevicesCatalog extends CActiveRecord
 			array('id,name,address,type_id', 'required'),
 			array('name', 'length', 'max'=>150),
             array('address', 'length', 'max'=>100),
+            array('cur_value', 'length', 'max'=>150),
             array('id,type_id', 'numerical', 'integerOnly'=>true),
 		);
 	}

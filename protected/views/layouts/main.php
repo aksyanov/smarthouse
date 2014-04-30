@@ -43,7 +43,6 @@
     <div class="container">
     <?php
         echo $content;
-        //$this->widget('WLight',array('params'=>array('param1'=>'param1text')));
     ?>
     </div>
 

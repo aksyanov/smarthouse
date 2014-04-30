@@ -10,7 +10,7 @@
 
         <br>
         <h3>
-            Протечка
+            Протечка (демо)
         </h3>
         <ul>
             <li>
@@ -31,4 +31,9 @@
     </div>
 </div>
 
-<script>$("[name='my-checkbox']").bootstrapSwitch();</script>
+<script>
+    $("[name='my-checkbox']").bootstrapSwitch(function(){alert(1)});
+    $('input[name="my-checkbox"]').on('switchChange.bootstrapSwitch', function(event, state) {
+        changeValueOfSwitch(this.value,state);
+    });
+</script>

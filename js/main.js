@@ -33,3 +33,14 @@ function renewDevicesCatalog(){
     }})
 }
 
+function changeValueOfSwitch(id,value){
+    $("#switchId_"+id).attr('disabled','true');
+    //$('#prelod_renew').show();
+
+    $.ajax({url: "ajax/ChangeValueOfSwitch",dataType:"json",data:{"idDevice":id,"value":value},success: function(answer){
+        if(answer['status'] == 'error')
+            alert('Some error');
+        $("#switchId_"+id).removeAttr('disabled');
+    }})
+}
+

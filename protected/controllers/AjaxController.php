@@ -25,4 +25,9 @@ class AjaxController extends CController
     {
         echo Ajax::GetDevicesCatalogInHtmlTable();
     }
+
+    public function actionChangeValueOfSwitch()
+    {
+        echo json_encode(Ajax::ChangeValueOfSwitch());
+    }
 }

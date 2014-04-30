@@ -21,10 +21,14 @@ class WLight extends CWidget
 
             echo '<ul>';
             foreach($devices as $device){
+                $check = '';
+                if($device->cur_value == 1)
+                    $check = 'checked';
+
                 echo '
                         <li>
                             <b>'.$device->name.'</b><br>
-                            <input type="checkbox" name="my-checkbox" cheked>
+                            <input id="switchId_'.$device->id.'" type="checkbox" name="my-checkbox" value="'.$device->id.'" '.$check.'>
                         </li>
                         <br>
                 ';
