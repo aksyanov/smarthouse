@@ -68,4 +68,52 @@ class SiteController extends CController
         $this->redirect(Yii::app()->homeUrl);
     }
 
+    /*public function getMainPanel(){
+        echo '
+
+        <div class="row">
+        <div class="col-md-2">
+            <h2>
+                Датчики
+            </h2><hr>';
+
+        $this->widget('WTemps',array('params'=>array('all'=>true)));
+
+        echo '
+            <br>
+            <h3>
+                Протечка (демо)
+            </h3>
+            <ul>
+                <li>
+                    <p class="bg-success">Ванная комната : Всё в норме</p>
+                </li>
+                <li>
+                    <p class="bg-danger">Гостинная : <b>Прочтечка</b></p>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-2" style="margin-left: 50px">
+            <h2>
+                Управление
+            </h2><hr>';
+
+        $this->widget('WLight',array('params'=>array('all'=>true)));
+
+        echo '
+        </div>
+        <div class="col-md-3" style="margin-left: 50px">
+            <h2>
+                Голосовое управление
+            </h2><hr>';
+
+        $this->widget('WSpeechControl');
+
+        echo '
+        </div>
+    </div>';
+    }*/
+
+
+
 }

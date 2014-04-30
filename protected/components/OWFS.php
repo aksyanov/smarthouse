@@ -76,7 +76,7 @@ class OWFS
     }
 
     //Метод для примера
-    public static function key_switch($key_label = "", $key_pio = 0, $key_ch = ""){
+    /*public static function key_switch($key_label = "", $key_pio = 0, $key_ch = ""){
         $cpio = self::getValueByID($key_label, $key_ch );
         if ( $cpio != $key_pio ){
             //self::$ow->set("$key_addr/$key_ch", $key_pio);
@@ -85,6 +85,6 @@ class OWFS
             // Запись события в журнал
             //write_list(get_id_cl("keys_journal", 1), "SYSDATE(), $key_tmpID, '$key_pio'");
         }
-    }
+    }*/
 
 }

@@ -13,19 +13,6 @@
 </head>
 <body>
 
-    <?
-        if(!Yii::app()->user->isGuest){
-    ?>
-        <div id="userInfoWidget">
-            <?php
-                $this->widget('WLight',array('params'=>array('param1'=>'param1text')));?>
-            ?>
-            <div class="clear"></div>
-        </div>
-    <?
-        }
-    ?>
-
     <nav class="navbar navbar-default">
         <a class="navbar-brand" href="#">SmartHouse</a>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -37,6 +24,8 @@
                     </ul>
                 </li>
             </ul>
+
+            <img id="prelod_renew_main" src="<?php echo Yii::app()->request->baseUrl;?>/img/preloader.gif">
         </div>
     </nav>
 

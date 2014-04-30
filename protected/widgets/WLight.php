@@ -22,7 +22,8 @@ class WLight extends CWidget
             echo '<ul>';
             foreach($devices as $device){
                 $check = '';
-                if($device->cur_value == 1)
+                $curValue = OWFS::getValueByID($device->id);
+                if($curValue == 1)
                     $check = 'checked';
 
                 echo '

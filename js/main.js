@@ -2,6 +2,15 @@ _sitePref = "/porfolio/index.php/";
 
 $('.btn_delete_device').click(function(){deleteDevice(this)});
 $('.btn_renew_device').click(function(){renewDevicesCatalog()});
+$('#renewMainPanel').click(function(){renewMainPanel()});
+$('#btn_renew_datch').click(function(){renewMainPanelEl('datch')});
+$('#btn_renew_light').click(function(){renewMainPanelEl('light')});
+
+
+$("[name='my-checkbox']").bootstrapSwitch(function(){alert(1)});
+$('input[name="my-checkbox"]').on('switchChange.bootstrapSwitch', function(event, state) {
+    changeValueOfSwitch(this.value,state);
+});
 
 function deleteDevice(elem){
     $(elem).attr('disabled','true');
@@ -45,12 +54,15 @@ function changeValueOfSwitch(id,value){
 }
 
 function speechAction(){
+    $('#prelod_renew_main').fadeIn();
     speech = $("#speechInput");
     $.ajax({url: "ajax/SpeechAction",dataType:"json",data:{"speechText":speech.val()},success: function(answer){
-        if(answer['status'] == 'error')
+        if(answer['status'] == 'error'){
             alert('Some error');
+            $('#prelod_renew_main').fadeOut();
+        }
         else{
-
+            $('#prelod_renew_main').fadeOut();
             var htmlText = answer['htmlText'];
             var htmlTextCommand = answer['htmlTextCommand'];
             var htmlTextAnswer = answer['htmlTextAnswer'];
@@ -72,7 +84,44 @@ function speechAction(){
                         '</div>';
 
             $("#speechAnswer").prepend(html+html2);
+            renewMainPanelEl('light');
+
         }
     }})
 }
 
+
+//don`t use
+function renewMainPanel(){
+    $('#prelod_renew_main').fadeIn();
+
+    $.ajax({url: "ajax/GetMainPanel",success: function(answer){
+        $('#mainPanel').html(answer);
+        $('#prelod_renew_main').fadeOut();
+
+        $("[name='my-checkbox']").bootstrapSwitch(function(){alert(1)});
+        $('input[name="my-checkbox"]').on('switchChange.bootstrapSwitch', function(event, state) {
+            changeValueOfSwitch(this.value,state);
+        });
+    }})
+}
+
+function renewMainPanelEl(type){
+    $('#prelod_renew_main').fadeIn();
+
+    if(type == 'datch')
+        $.ajax({url: "ajax/GetDatchWidget",success: function(answer){
+            $('#mainPanelDatch').html(answer);
+            $('#prelod_renew_main').fadeOut();
+        }})
+    else if(type == 'light')
+        $.ajax({url: "ajax/GetLighthWidget",success: function(answer){
+            $('#mainPanelLight').html(answer);
+            $('#prelod_renew_main').fadeOut();
+
+            $("[name='my-checkbox']").bootstrapSwitch(function(){alert(1)});
+            $('input[name="my-checkbox"]').on('switchChange.bootstrapSwitch', function(event, state) {
+                changeValueOfSwitch(this.value,state);
+            });
+        }})
+}

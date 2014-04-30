@@ -35,4 +35,14 @@ class AjaxController extends CController
     {
         echo json_encode(Ajax::SpeechAction());
     }
+
+    public function actionGetDatchWidget()
+    {
+        $this->widget('WTemps',array('params'=>array('all'=>true)));
+    }
+
+    public function actionGetLighthWidget()
+    {
+        $this->widget('WLight',array('params'=>array('all'=>true)));
+    }
 }
